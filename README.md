@@ -19,15 +19,21 @@
 git clone 
 cd socialLogin/laravel
 ```
+>Create empty folder
+```bash
+mkdir laravel mysql
+```
 
 2. Create **.env** file 
 ```bash
 mv .env.example .env
 vi .env
 ```
-**.env**
+>**.env** <br>
+```bash
 APP_NAME=**<YOUR_APP_NAME>** <br>
 MYSQL_ROOT_PASSWORD=**<YOUR_MYSQL_ROOT_PASSWORD>**
+```
 
 3. Run docker-compose
 go back to socialLogin path
@@ -35,28 +41,28 @@ go back to socialLogin path
 cd ..
 ```
 
-Run docker-compose
+>Run docker-compose
 ```bash
 docker-compose up -d 
 ```
 
 4. Exec to app container (Laravel container) and create laravel project
-Exec to app container
+>Exec to app container
 ```bash
 docker-compose exec app bash
 ```
 
-Create laravel project
+>Create laravel project
 ```bash
 :/var/www$ composer create-project laravel/laravel --prefer-dist .
 ```
 
-Out of the app container
+>Out of the app container
 ```bash
 :/var/www$ exit
 ``` 
 
-Connect database
+>Connect database
 **.env**
 ```bash
 APP_URL=http://localhost:8000
@@ -69,11 +75,11 @@ DB_USERNAME=<YOUR_APP_NAME>_user
 DB_PASSWORD=password
 ``` 
 
-***note how to migrate**
+>***note how to migrate**
 ```bash
 docker-compose exec app php artisan migrate
 ``` 
 
 5. Go to your web browser <br> 
 - Laravel <a>http://localhost:8000/</a>
-- phpmyadmin <a>http://localhost:8000/</a>
+- phpmyadmin <a>http://localhost:8081/</a>
