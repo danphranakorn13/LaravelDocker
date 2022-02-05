@@ -1,4 +1,4 @@
-### PHP Laravel Environment (Docker)
+# PHP Laravel Environment (Docker)
 
 ## Required
 
