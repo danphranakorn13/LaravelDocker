@@ -24,7 +24,7 @@
 1. Clone this project && cd to laravel folder
 ```bash
 git clone 
-cd socialLogin/laravel
+cd LaravelDocker
 ```
 >Create empty folder
 ```bash
